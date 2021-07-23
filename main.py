@@ -1,4 +1,7 @@
 import requests
 
-response = requests.get("https://playground.learnqa.ru/api/get_text")
-print(response.text)print(response.text)
+method = input()
+response = requests.request(method,"https://playground.learnqa.ru/ajax/api/compare_query_type", data={"param1":"method1"})
+print(response.status_code)
+print(response.text)
+print('method =', method)
